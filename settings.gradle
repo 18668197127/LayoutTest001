@@ -1,0 +1,1 @@
+include ':app', ':smalltestdemo', ':dialogtest01'

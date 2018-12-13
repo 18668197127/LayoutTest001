@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这个是一个长文本TextView的测试布局-->
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/longtext"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="60dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:text="这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!
+这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!
+这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!这是一个长文本!!!"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="128dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="充钱有座山，大神大神大家阿斯利康就卡死角度来看阿娇是考虑到家里开始觉得卢卡斯经理看见爱上了空间绿卡时间垃圾索拉卡卢卡斯多了阿斯兰会计拉克丝角度来看静安寺路快递绿卡时间卢卡斯"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:textSize="18sp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

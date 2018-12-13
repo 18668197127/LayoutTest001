@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这个是测试按钮点击失效的测试页面-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/bottombutton_linearlayout2">
+
+        <Button
+            android:id="@+id/button_lijiyongche2"
+            android:layout_width="230dp"
+            android:layout_height="36dp"
+            android:background="#FECB51"
+            android:text="立即用车"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/button_yuyue2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:background="#363636"
+            android:text="预约"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</LinearLayout>
