@@ -2,6 +2,9 @@ package com.example.dialogtest01;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +12,11 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.PopupWindow;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -19,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button buttonUseCar;
     private Button buttonUseCar02;
+    private Button buttonUseCar03;
+    private ConstraintLayout cl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonUseCar.setOnClickListener(this);
         buttonUseCar02=findViewById(R.id.button_use_car02);
         buttonUseCar02.setOnClickListener(this);
+        buttonUseCar03=findViewById(R.id.button_use_car03);
+        buttonUseCar03.setOnClickListener(this);
+        cl=findViewById(R.id.cl);
 //        //这是一个Math.round的测试(是否+0.5)
 //        Log.i(TAG, "Math.round测试:"+roundtest((float) 11.1,true)+","+roundtest((float) 11.1,false));
 //        Log.i(TAG, "Math.round测试:"+roundtest((float) 11.6,true)+","+roundtest((float) 11.6,false));
@@ -37,7 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        Log.i(TAG, "Math.round测试:"+roundtest((float) 11.5,true)+","+roundtest((float) 11.5,false));
     }
 
-    //立即用车按钮为alertdialog,立即用车按钮02为自定义dialog
+    //立即用车按钮为alertdialog,立即用车按钮02为自定义dialog,立即用车按钮03为PopupWindow
+    //button_use_car    alertdialog
+    //button_use_car2    自定义dialog
+    //button_use_car3    popupWindow
 
     @Override
     public void onClick(View v) {
@@ -90,10 +103,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             myDialog.setMyOnclickListener("这是外部实现的点击事件", new MyDialog.MyOnclickListener() {
                 @Override
                 public void onYesClick(String message) {
-                    System.out.println("测试:这是外部实现的点击事件");
+                    System.out.println("测试:"+message);
                 }
             });
             myDialog.show();
+        }
+        if (v.getId()==R.id.button_use_car03){
+            PopupWindow popupWindow = new PopupWindow(this);
+            popupWindow.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+            popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+            popupWindow.setContentView(LayoutInflater.from(this).inflate(R.layout.dialog_item01, null));
+            popupWindow.setOutsideTouchable(false);
+            popupWindow.setFocusable(false);
+            popupWindow.setTouchable(true);
+            popupWindow.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+//            popupWindow.showAsDropDown(buttonUseCar);
+            popupWindow.showAtLocation(cl,Gravity.TOP | Gravity.LEFT, 0, 100);
         }
     }
 

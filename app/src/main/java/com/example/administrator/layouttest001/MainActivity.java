@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity   {
             decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-//        initText02List();
-//        initOrderDetails(text02List);
-//        RecyclerView recyclerView=findViewById(R.id.recyclerview_order_details);
-//        LinearLayoutManager manager=new LinearLayoutManager(this);
-//        recyclerView.setLayoutManager(manager);
-//        OrderDetailsAdapter adapter=new OrderDetailsAdapter(orderDetailList);
-//        recyclerView.setAdapter(adapter);
+        initText02List();
+        initOrderDetails(text02List);
+        RecyclerView recyclerView=findViewById(R.id.recyclerview_order_details);
+        LinearLayoutManager manager=new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(manager);
+        OrderDetailsAdapter adapter=new OrderDetailsAdapter(orderDetailList);
+        recyclerView.setAdapter(adapter);
 
 
 

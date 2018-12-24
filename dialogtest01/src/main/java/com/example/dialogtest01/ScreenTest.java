@@ -14,6 +14,8 @@ import android.view.WindowManager;
 
 import java.lang.reflect.Field;
 
+//这是一个获取屏幕高度的Demo
+
 public class ScreenTest extends AppCompatActivity {
     private static final String TAG = "ScreenTest";
     private ConstraintLayout constraintLayout;

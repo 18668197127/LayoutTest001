@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dialogtest01" />
             <option value="$PROJECT_DIR$/smalltestdemo" />
+            <option value="$PROJECT_DIR$/testlayout" />
+            <option value="$PROJECT_DIR$/testretrofit" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,1 +1,1 @@
-include ':app', ':smalltestdemo', ':dialogtest01'
+include ':app', ':smalltestdemo', ':dialogtest01', ':testretrofit', ':testlayout'
