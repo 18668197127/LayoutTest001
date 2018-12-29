@@ -3,6 +3,9 @@ package com.example.smalltestdemo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.smalltestdemo.parent_son.Parent;
+import com.example.smalltestdemo.parent_son.Son;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,5 +49,10 @@ public class TestJsonArray extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        Parent parent=new Son();
+        parent.ParentMethod();
+        ((Son) parent).SonMethod();
+
+
     }
 }
