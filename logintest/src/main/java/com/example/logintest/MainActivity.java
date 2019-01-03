@@ -37,10 +37,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MyMainActivity";
     private String responseString;
     private String responseString2;
     private String responseString3;
+
+    private String correctTk="38f9854adf0206a1a5221a767791b707da40d737";
+    private String errorTk="38f9854adf0206a1a5221a767791b707da40aaaa";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                retrofitV3();
+                retrofitV3(correctTk);
+                retrofitV3(errorTk);
             }
         });
 
@@ -125,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: "+this.getObbDir().getAbsolutePath());
 
     }
+    //注册请求
     //retrofit获取数据Data2,之后gson解析到Result成员变量中
     public void retrofitV1() {
         new Thread(new Runnable() {
@@ -155,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
     }
+    //验证码请求
     //retrofit获取数据Data2,之后gson解析到Result成员变量中
     public void retrofitV2() {
         new Thread(new Runnable() {
@@ -184,8 +190,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
     }
-    //retrofit获取数据Data2,之后gson解析到Result成员变量中
-    public void retrofitV3() {
+    //token验证请求
+    public void retrofitV3(final String token) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -193,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                         .baseUrl("http://test.mouqukeji.com/api/Login/")
                         .build();
                  TokenVfPost tokenVfPost =retrofit.create(TokenVfPost.class);
-                Call<ResponseBody> call=tokenVfPost.postData("38f9854adf0206a1a5221a767791b707da40d737");
+                Call<ResponseBody> call=tokenVfPost.postData(token);
 //                Call<ResponseBody> call=getCodePost.postData2("18668197127");
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override

@@ -80,7 +80,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
-
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"点击了图片",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

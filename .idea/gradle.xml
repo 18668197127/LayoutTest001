@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/smalltestdemo" />
             <option value="$PROJECT_DIR$/testlayout" />
             <option value="$PROJECT_DIR$/testretrofit" />
+            <option value="$PROJECT_DIR$/threadtest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
