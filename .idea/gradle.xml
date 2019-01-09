@@ -8,11 +8,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/TestJava" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dialogtest01" />
             <option value="$PROJECT_DIR$/logintest" />
+            <option value="$PROJECT_DIR$/recyclerviewtest" />
             <option value="$PROJECT_DIR$/rxjavatest01" />
             <option value="$PROJECT_DIR$/smalltestdemo" />
+            <option value="$PROJECT_DIR$/testedittext" />
             <option value="$PROJECT_DIR$/testlayout" />
             <option value="$PROJECT_DIR$/testretrofit" />
             <option value="$PROJECT_DIR$/threadtest" />

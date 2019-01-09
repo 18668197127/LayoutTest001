@@ -1,1 +1,1 @@
-include ':app', ':smalltestdemo', ':dialogtest01', ':testretrofit', ':testlayout', ':rxjavatest01', ':logintest', ':threadtest'
+include ':app', ':smalltestdemo', ':dialogtest01', ':testretrofit', ':testlayout', ':rxjavatest01', ':logintest', ':threadtest', ':TestJava', ':testedittext', ':recyclerviewtest'

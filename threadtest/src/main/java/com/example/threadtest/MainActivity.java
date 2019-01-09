@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         threadTest1();
         retrofitV3(correctTk);
 //        retrofitV4(correctTk);
+        System.out.println("测试");
     }
 
     public void threadTest1(){
